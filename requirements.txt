@@ -3,11 +3,13 @@ moviepy==2.1.2
 streamlit==1.45.0
 edge_tts==7.2.7
 
-# Thỏa mãn google-adk
+# Thỏa mãn yêu cầu của google-adk
 fastapi==0.124.1
 uvicorn==0.34.0
 
-openai==1.56.1
+# THAY ĐỔI: Sử dụng >= để pip tự phối hợp với httpx
+openai>=1.56.1
+
 faster-whisper==1.1.0
 loguru==0.7.3
 google.generativeai==0.8.6
@@ -18,16 +20,15 @@ redis==5.2.0
 python-multipart==0.0.19
 pyyaml==6.0.3
 
-# Thỏa mãn google-colab
+# Thỏa mãn yêu cầu của google-colab
 requests==2.32.4
 
 socksio==1.0.0
 pydub==0.25.1
 
-# THAY ĐỔI Ở ĐÂY: Bỏ ghim cứng hoặc nâng cấp lên bản mới hơn (ví dụ >=1.60.0) 
-# để cho phép pip lấy bản mới tương thích với httpx 0.28.1
+# THAY ĐỔI: Sử dụng >= để tránh xung đột với openai và httpx mới
 litellm>=1.60.0
 
-# Ép phiên bản để thỏa mãn firebase-admin và google-genai
-httpx==0.28.1
+# THAY ĐỔI: Chỉ đặt điều kiện tối thiểu để đáp ứng firebase-admin/google-genai, không ghim cứng
+httpx>=0.28.1
 starlette==0.49.1
